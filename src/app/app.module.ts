@@ -11,6 +11,9 @@ import { environment } from '../environments/environment';
 import { CoreModule } from './core/core.module';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 
+import {routes } from '../app.routes';
+
+
 
 @NgModule({
   
