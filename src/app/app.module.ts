@@ -11,7 +11,10 @@ import { environment } from '../environments/environment';
 import { CoreModule } from './core/core.module';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 
-import {routes } from '../app.routes';
+import {routes } from './app.routes';
+import { GmailLoginComponent } from './gmail-login/gmail-login.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { AuthService } from './core/auth.service';
 
 
 
@@ -23,11 +26,12 @@ import {routes } from '../app.routes';
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireAuthModule,
-    CoreModule
+    CoreModule,
+    routes
 
   ],
-  declarations: [ AppComponent, UserProfileComponent ],
-  providers: [],
+  declarations: [ AppComponent, UserProfileComponent, GmailLoginComponent, NavbarComponent ],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
